@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Genshin Birthdays · Mini App</title>
+  <meta name="theme-color" content="#0b0b10" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="card">
+    <div class="card-header-line">
+      <div class="card-pill">b-day tracker</div>
+      <div class="card-small" id="todayInfo">Сегодня: ...</div>
+    </div>
+
+    <div class="card-title">Дни рождения · Genshin Impact</div>
+    <div class="card-subtitle" id="monthTitle">Текущий месяц</div>
+
+    <div class="section-label">этот месяц</div>
+    <div class="month-title" id="giMonthName">Месяц</div>
+
+    <ul class="bday-list" id="giList"></ul>
+
+    <div class="divider"><div class="divider-star"></div></div>
+
+    <div class="infopovod" id="infopovodLine">
+      <span class="label">Инфоповод</span> загружаем…
+    </div>
+
+    <div class="footer">
+      Братец Лис · <a href="https://t.me/brfox_cosplay" target="_blank">@brfox_cosplay</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Telegram Mini App init
+    if (window.Telegram && window.Telegram.WebApp) {
+      const tg = window.Telegram.WebApp;
+      tg.ready();
+      tg.expand();
+    }
+  </script>
+</body>
+</html>
